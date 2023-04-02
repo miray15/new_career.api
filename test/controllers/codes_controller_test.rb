@@ -10,4 +10,9 @@ class CodesControllerTest < ActionDispatch::IntegrationTest
     assert_equal Code.count, data.length
   end
 
-end
+  test "create" do 
+    assert_difference "Code.count", 1 do 
+      post "/codes.json", params: { name: "app developer", location: "miami", salary: 115000}
+    end 
+  end
+end 
