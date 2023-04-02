@@ -13,4 +13,9 @@ def create
   )
   render :show
 end
+
+def show
+  @code = Code.find_by(id: params[:id])
+  render :show 
+end 
 end
