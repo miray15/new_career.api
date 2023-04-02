@@ -6,4 +6,8 @@ post "/codes" => "codes#create"
 
 get "/codes/:id" => "codes#show"
 
+patch "/codes/:id:" => "codes#update"
+
 end
+
+
